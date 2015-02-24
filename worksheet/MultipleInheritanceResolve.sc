@@ -1,3 +1,6 @@
+
+//This example explain how scala tames multiple inheritance.
+
 trait A{
   def a = 1
 }
@@ -31,16 +34,13 @@ trait Z extends Y{
   }
 }
 
-
-
 val xy = new AnyRef with X with Z with B with Y
 
 xy.a
-//https://blog.safaribooksonline.com/2013/05/30/traits-how-scala-tames-multiple-inheritance/
-//Traits: How Scala Tames Multiple Inheritance
-//with X resolved as ->  A X
-//with Z resolved as ->  A Y Z
-//with B resolved as ->   A X B
-//with Y resolved as ->   A Y
+
+//with X resolved as this sequence ->  A X
+//with Z resolved as this sequence->  A Y Z
+//with B resolved as this sequence->   A X B
+//with Y resolved as this sequence->   A Y
 //Now start from left pick class without repeating
 //A X Y Z B
