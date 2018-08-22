@@ -1,5 +1,12 @@
 object FindTheMissingElement {
 
+  /*
+    Question: First list consists of non-negative integers.
+    A second list is formed by shuffling first list and deleting few random elements.
+    Given these two list, find which element is missing in the second list.
+   */
+
+  //solution:
   def run(l1: List[Int], l2: List[Int]): Unit = {
     val list2 = l2.sorted
 
