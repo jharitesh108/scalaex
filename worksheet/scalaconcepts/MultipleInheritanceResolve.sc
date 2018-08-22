@@ -1,6 +1,7 @@
 
 //This example explain how scala tames multiple inheritance.
 
+
 trait A{
   def a = 1
 }
